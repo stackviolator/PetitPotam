@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+name = "PetitPotam"
+dependencies = [
+	"impacket",
+	"pycryptodome",
+]
+requires-python = ">=3.6"
+authors = [
+	{name = "PoC tool to coerce Windows hosts to authenticate to other machines via MS-EFSRPC EfsRpcOpenFileRaw or other functions."}
+]
+description = "Python implementation for PetitPotam"
+readme = "README.md"
+license = {file = "LICENSE"}
+keywords = ["PetitPotam", "Windows","SMB", "RPC", "NTLM"]
+classifiers = [
+	"Intended Audience :: Developers",
+	"License :: GPL",
+	"Programming Language :: Python 3",
+	"Programming Language :: Python 3.6",
+	"Programming Language :: Python 3.7",
+	"Programming Language :: Python 3.8",
+	"Programming Language :: Python 3.9",
+	"Programming Language :: Python 3.10",
+	"Programming Language :: Python 3.11",
+	"Programming Language :: Python 3.12",
+]
+
+[project.scripts]
+petitpotam = "petitpotam.PetitPotam:main"
+
+[project.urls]
+Repository = "https://github.com/stackviolator/PetitPotam"
+Issues = "https://github.com/stackviolator/PetitPotam/issues"
+
